@@ -14,9 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
-})-> name('index');
+    return view('home');
+})-> name('home');
 
 Route::get('/prodotti', function(){
     return view('prodotti');
 })-> name('prodotti'); /*mette nome alla route*/
+
+//admin
+Route::get('admin/prodotti', function(){
+    return view('admin.prodotti');
+})-> name('admin.prodotti');
